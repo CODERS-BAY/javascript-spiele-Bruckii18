@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monster Hunter Universe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/monster.css">
+</head>
+<header>
+    <a href="index.html"><img src="img/homeButton.PNG" alt="Home"></a>
+    <nav>
+        <ul>
+            <li><a href="monster.html">Monster Hunter Universe</a></li>
+            <li><a href="rockPaperScissor.html">Rock Paper Scissors</a></li>
+            <li><a href="guessingGame.html">Guess a Number</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <main>
+        <div id="gameMenu" class="active">
+            <div>
+                <h2>Welcome to Monster Hunter Universe!</h2>
+                <p>In this game you have to shoot a monster with the bombs you have available.</p>
+                <p>Now pick the map you want to play on.</p>
+                <p>This will affect the gravity of your bombs.</p>
+            </div>
+            <div id="worldSelection">
+                <div onclick="selectWorld('earth')">Earth</div>
+                <div onclick="selectWorld('moon')">Moon</div>
+                <div onclick="selectWorld('mars')">Mars</div>
+                <div onclick="selectWorld('jupiter')">Jupiter</div>
+            </div>
+        </div>
+
+        <div id="inGame" class="hidden">
+            <div id="settings">
+                <label for="powerInput">Power (0-100)</label>
+                <input type="number" id="powerInput">
+                <label for="angleInput">Angle (0°-90°)</label>
+                <input type="number" min="0" max="90" id="angleInput">
+                <button id="shoot">Throw object</button>
+            </div>
+            <div id="gameWindow">
+                <h2 id="monsterDistanceBox"></h2>
+                <div id="alertBox">
+                </div>
+
+                <img src="img/monsterHunter/bomb.png" id="bomb" alt="bomb">
+                <img src="img/monsterHunter/monster.png" id="monster" alt="monster">
+            </div>
+        </div>
+    </main>
+<script type="text/javascript" src="js/monster.js"></script>
+</body>
+<footer>
+    <p>&copy; 2021 Michael Bruckbauer</p>
+</footer>
+</html>
