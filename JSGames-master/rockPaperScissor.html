@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<header>
+    <a href="index.html"><img src="img/homeButton.PNG" alt="Home"></a>
+    <nav>
+        <ul>
+            <li><a href="monster.html">Monster Hunter Universe</a></li>
+            <li><a href="rockPaperScissor.html">Rock Paper Scissors</a></li>
+            <li><a href="guessingGame.html">Guess a Number</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <main id="rockpaperscissor">
+            <div id="gameSettings" class="screen active">
+                <h2>Welcome to Rock Paper Scissors</h2>
+                <p>Choose the amount of rounds you want to play.</p>
+                <p>Draws will not count towards the roundcount.</p>
+                <select name="tryInput" id="tryInput">
+                    <option value="1">Best of 1</option>
+                    <option value="3">Best of 3</option>
+                    <option value="5">Best of 5</option>
+                    <option value="11">Best of 11</option>
+                    <option value="15">Best of 15</option>
+                    <option value="21">Best of 21</option>
+                </select>
+                <button onclick="startGame()">Start the Game</button>
+            </div>
+
+            <div class="screen" id="rpsGameScreen">
+                <div class="flex space-between" id="displays">
+                    <div id="userDisplay">
+                        <img src="img/rockPaperScissors/questionmark.png" alt="userChoice" id="userChoiceDisplay">
+                        <h3>User</h3>
+                        <p id="userPointDisplay"></p>
+                    </div>
+                    <div id="pcDisplay">
+                        <img src="img/rockPaperScissors/questionmark.png" alt="pcChoice" id="pcChoiceDisplay">
+                        <h3>PC</h3>
+                        <p id="pcPointDisplay"></p>
+                    </div>
+                </div>
+                <div>
+                    <p id="textOutput"></p>
+                </div>
+                <div class="flex" id="selection">
+                    <img src="img/rockPaperScissors/rock.png" alt="Rock" onclick="play(1)">
+                    <img src="img/rockPaperScissors/paper.png" alt="Paper" onclick="play(2)">
+                    <img src="img/rockPaperScissors/scissors.png" alt="Scissors" onclick="play(3)">
+                </div>
+            </div>
+    </main>
+<script type="text/javascript" src="js/rockPaperScissor.js"></script>
+<script type="text/javascript" src="js/lib.js"></script>
+</body>
+<footer>
+    <p>&copy; 2021 Michael Bruckbauer</p>
+</footer>
+</html>
